@@ -49,7 +49,7 @@ model_dt <- train(Survived ~ ., data = train, method = "rpart")
 model_dt$results$Accuracy
 
 #Combine Accuracy Results of Models
-results <- resamples(list(Logit = model_logistic, KNN = model_knn, SVM = model_svm, RF = model_rf))
+results <- resamples(list(Logit = model_logistic, KNN = model_knn, DT = model_dt, RF = model_rf))
 summary(results)
 
 #Plot Accuracy
